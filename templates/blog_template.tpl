@@ -18,9 +18,9 @@
 </nav>
 <div class="container" style="padding-top: 1%">
 	<div class="container-fluid well">
-        <form class="form-vertical" action="" method="POST">
+        <form class="form-vertical" action="{$Action}" method="POST">
             <div class="form-group">
-              <label class="control-label col-sm-3" for="post" style="font-size: x-large">{$Action} your post:</label>
+              <label class="control-label col-sm-3" for="post" style="font-size: x-large">{$ActionPost} your post:</label>
               <div>
                 <textarea rows="5" class="form-control" id="post" name="postContent" style="resize: vertical;">{$Post_content}</textarea>
               </div>

@@ -13,7 +13,7 @@ $smarty->compile_dir = 'templates_c';
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db) {
   // criar query numa string
-   //$query  = "";
+   $query  = "SELECT * FROM microposts WHERE id=";
  
   // executar a query
   //if(!($result = @ mysql_query($query,$db )))
@@ -34,6 +34,7 @@ if($db) {
   $smarty->assign('href0',"index.php");
   $smarty->assign('MENU1',"Blog");
   $smarty->assign('href1',"blog.php");
+  $smarty->assign('ActionPost',"Write");
   $smarty->assign('Action',"Write");
 
   // Mostra a tabela
