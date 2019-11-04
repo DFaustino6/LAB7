@@ -42,10 +42,11 @@ if($db) {
   $smarty->assign('FORUMName',"DAW Lab");
   $smarty->assign('href0',"index.php");
 
-  if(isset($_COOCKIE['autologin'])){
+  if(isset($_COOKIE['autologin'])){
+    $cValue=$_COOKIE['autologin'];
     $query = "SELECT name, id 
              FROM users
-             WHERE remember_digest ='$Cookie'";
+             WHERE remember_digest ='$cValue'";
     $result = @ mysql_query($query,$db)
     $nrows  = mysql_num_rows($result);
     if($nrows > 0) {
