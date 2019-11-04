@@ -51,8 +51,7 @@ if($db) {
     $smarty->assign('MENU6',"Blog");
     $smarty->assign('href6',"blog.php");
   }
-
-  if(!isset($_SESSION['username'])){
+  else{
     $smarty->assign('MENU4',"Login");
     $smarty->assign('MENU5',"Register");
     $smarty->assign('href4',"login.php");
