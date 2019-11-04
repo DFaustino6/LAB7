@@ -60,6 +60,7 @@ $smarty->config_dir = 'configs';
   $smarty->assign('ErrorMsg',$ErrorMsg);
   $smarty->assign('ErrorType',$_REQUEST['ErrorType']);
   $smarty->assign('href5',"register.php");
+  $smarty->assign('href0',"index.php");
   
   // Mostra a tabela
   $smarty->display('register_template.tpl');

@@ -9,7 +9,7 @@
 <nav class="navbar navbar-inverse" style="background-color: #006699; border-color: #006699">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" style="color: white" href="#">{$FORUMName}</a>
+			<a class="navbar-brand" style="color: white" href="{$href0}">{$FORUMName}</a>
 		</div>
 		<ul class="nav navbar-nav navbar-left">
 	    	<li class="dropdown table-bordered" ><a class="dropdown-toggle" data-toggle="dropdown" href="" style="color: white; background-color: #006699">Menu&nbsp;<span class="caret"></span></a>
