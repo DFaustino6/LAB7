@@ -5,8 +5,8 @@ session_start();
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db) {
   // criar query numa string
-  $PostId=$_GET['PostId'];
-  if(isset($_GET['PostId'])){
+  $PostId=$_GET['Post_Id'];
+  if(isset($_GET['Post_Id'])){
  	 $query  = "SELECT * FROM microposts WHERE id='$PostId'";
  	 if(!($result = @ mysql_query($query,$db)))
    			showerror();
