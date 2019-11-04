@@ -41,6 +41,7 @@ if($db) {
   $smarty->assign('MENU2',"SubForum2");
   $smarty->assign('MENU3',"SubForum3");
   $smarty->assign('FORUMName',"DAW Lab");
+  $smarty->assign('href0',"index.php");
 
   if(isset($_SESSION['username'])){
     $smarty->assign('MENU4',"Logout");

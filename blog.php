@@ -33,9 +33,10 @@ if($db) {
 
   // faz a atribuição das variáveis do template smarty
   $smarty->assign('posts',$tuple);*/
+  $smarty->assign('FORUMName',"DAW Lab");
+  $smarty->assign('href0',"index.php");
   $smarty->assign('MENU1',"Blog");
   $smarty->assign('href1',"blog.php");
-  $smarty->assign('FORUMName',"DAW Lab");
 
   // Mostra a tabela
   $smarty->display('blog_template.tpl');
