@@ -18,6 +18,7 @@ if($db) {
    	 if(isset($_SESSION['username']) && $nrows>0){
    	 	$content=$_REQUEST['postContent'];
   		$query  = "UPDATE microposts SET content='$content', updated_at=NOW() WHERE id='$PostId'";
+  		print_r($query);
   		$result= @ mysql_query($query,$db);
   		$smarty->assign('Msg', "SUCCESS: Post updated");	
   		$smarty->assign('text_color',"green");
@@ -31,7 +32,7 @@ if($db) {
   }
 mysql_close($db);
 
-$smarty->display('message_template.tpl');
+//$smarty->display('message_template.tpl');
 } 
 
 ?>
