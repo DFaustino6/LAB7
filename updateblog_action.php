@@ -12,10 +12,11 @@ if($db) {
   $PostId=$_GET['Post_id'];
   if(isset($_GET['Post_id'])){
  	 $query  = "SELECT * FROM microposts WHERE id='$PostId'";
- 	 print_r($query);
- 	 if(!($result = @ mysql_query($query,$db)))
+ 	  	 if(!($result = @ mysql_query($query,$db)))
    			showerror();
    	 $nrows  = mysql_num_rows($result);
+   	 print_r($nrows);
+
    	 if(isset($_SESSION['username']) && $nrows>0){
    	 	$content=$_REQUEST['postContent'];
   		$query  = "UPDATE microposts SET content='$content', updated_at=NOW() WHERE id='$PostId'";
