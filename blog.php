@@ -14,7 +14,7 @@ $smarty->compile_dir = 'templates_c';
   $smarty->assign('ActionPost',"Write");
   $PostId=$_GET['Post_id'];
   if(isset($_GET['Post_id']))
-    $smarty->assign('Action',"updateblog_action.php?Post_id=PostId");
+    $smarty->assign('Action',"updateblog_action.php?Post_id=$PostId");
   else
     $smarty->assign('Action',"newblog_action.php");
 
