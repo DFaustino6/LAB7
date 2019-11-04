@@ -27,12 +27,12 @@
 			      </div>
 			    </div>
 			    <div class="form-group">        
-			      <div class="col-sm-10">
+			      <div class="col-sm-5">
 			        <button stype="submit" class="btn btn-success">Post</button>
 			      </div>
 			    </div>
 			    <div class="form-group">        
-			      <div class="col-sm-offset-2 col-sm-10">
+			      <div class="col-sm-offset-2 col-sm-5">
 			        <a href="index.php" role="button" class="btn btn-danger">Clear</a>
 			      </div>
 			    </div>
