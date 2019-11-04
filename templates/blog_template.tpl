@@ -20,7 +20,7 @@
 	<div class="container-fluid well">
 		<form class="form-vertical" action="" >
 			<div class="form-group">
-				<label class="controlo-label col-sm-2">{$Action} your post:</label>
+				<label class="controlo-label col-sm-2" for="post">{$Action} your post:</label>
 				<div class="col-sm-10">
 					<textarea class="form-control" id="post" name="postContent" style="resize: vertical;">{$post_content}</textarea>
 				</div>
@@ -37,7 +37,7 @@
 			</div>
 		</form>
 	</div>
-</div>
+</div>	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
