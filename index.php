@@ -42,7 +42,21 @@ if($db) {
   $smarty->assign('FORUMName',"DAW Lab");
   $smarty->assign('href0',"index.php");
 
+  if(isset($_COOCKIE['autologin'])){
+    $query = "SELECT name, id 
+             FROM users
+             WHERE remember_digest ='$Cookie'";
+    $result = @ mysql_query($query,$db)
+    $nrows  = mysql_num_rows($result);
+    if($nrows > 0) {
+      $tuple[0] = mysql_fetch_array($result,MYSQL_ASSOC);
+    $_SESSION['username'] = $tuple[0]['name'];
+    $_SESSION['id'] = $tuple[0]['id'];
+    }
+  }
+
   if(isset($_SESSION['username'])){
+
     $smarty->assign('MENU4',"Logout");
     $smarty->assign('MENU5',"Welcome"." ".$_SESSION['username']);
     $smarty->assign('href4',"logout_action.php");
