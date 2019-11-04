@@ -10,7 +10,7 @@ session_start();
       if(!existingEmail($db,$Email) || !rightPwd($db,$Email,$Pwd))
         returnLogin();
       else
-        SignIn();
+        SignIn($db);
   } 
 
 
@@ -48,8 +48,20 @@ session_start();
     header("Location: login.php?isWrong=1");
   }
 
-  function SignIn(){
+  function SignIn($db){
+    $autologin=$_REQUEST['autologin'];
+    $user_id=$_SESSION['id'];
+    if($autologin == 1) {
+    $cValue = substr(md5(time()), 0,32);
+    $MaxTime = time() + (3600 * 24 * 30);
+    setcookie("autologin",$cValue,$MaxTime);
 
+    $Cookie = "UPDATE users
+               SET remember_digest = '$cValue'
+               WHERE id = '$user_id'";          
+    if(!($result = @ mysql_query($Cookie,$db)))
+      showerror();
+  }
     header("Location: index.php");
   }
 

@@ -60,7 +60,7 @@
 			     <div class="form-group">        
 			      <div class="col-sm-offset-2 col-sm-10">
 			        <div class="checkbox">
-			          <label><input type="checkbox" name="remember">Remember me.</label>
+			          <label><input type="checkbox" name="autologin" value="1">Remember me.</label>
 			        </div>
 			      </div>
 			    </div>
@@ -72,7 +72,7 @@
   			</form>
 		</div>
 		<div class="container-fluid text-right">
-			<a href="#"><p>Forgot your password?</p></a>
+			<a href="password_reset.php"><p>Forgot your password?</p></a>
 			<a href="#"><p>Forgot your username?</p></a>
 		</div>
 		{if $isWrong eq 1}
