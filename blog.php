@@ -12,6 +12,7 @@ $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db){
    $query  = "SELECT content * FROM microposts WHERE id='$PostId'";
    $result = @ mysql_query($query,$db);
+   $smarty->assign('Post_content',$result);
 }
 mysql_close($db);
   
@@ -20,7 +21,7 @@ mysql_close($db);
   $smarty->assign('MENU1',"Blog");
   $smarty->assign('href1',"blog.php");
   $smarty->assign('ActionPost',"Write");
-  $smarty->assign('Post_content',$result);
+  
  
   if(isset($_GET['Post_id']))
     $smarty->assign('Action',"updateblog_action.php?Post_id=$PostId");
