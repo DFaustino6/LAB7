@@ -20,7 +20,7 @@ if($db) {
    $query  = "SELECT microposts.content, microposts.created_at, microposts.updated_at, users.name, microposts.upvotes,microposts.downvotes,microposts.id,microposts.user_id
              FROM microposts, users
              WHERE microposts.user_id = users.id
-             ORDER BY microposts.created_at DESC";
+             ORDER BY microposts.updated_at DESC";
  
   // executar a query
   if(!($result = @ mysql_query($query,$db )))
