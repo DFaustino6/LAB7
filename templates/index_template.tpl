@@ -101,7 +101,7 @@
                 <div class="col-sm-6">
                     <h4 style="color:white;">Created by:{$post.name}</h4>
                     {if $post.user_id eq $login_id}
-                      <a href="blog.php?Post_id=$post.id" role="button" class="btn btn-success" style="width: 35%"><span class="glyphicon glyphicon-edit"></span>&nbsp;Update</a>
+                      <a href="blog.php?Post_id={$post.id}" role="button" class="btn btn-success" style="width: 35%"><span class="glyphicon glyphicon-edit"></span>&nbsp;Update</a>
                     {/if}
                 </div>
                 <div class="col-sm-6">
