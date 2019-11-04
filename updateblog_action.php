@@ -12,13 +12,14 @@ if($db) {
   $PostId=$_GET['Post_id'];
   if(isset($_GET['Post_id'])){
  	 $query  = "SELECT * FROM microposts WHERE id='$PostId'";
+ 	 print_r($query);
  	 if(!($result = @ mysql_query($query,$db)))
    			showerror();
    	 $nrows  = mysql_num_rows($result);
    	 if(isset($_SESSION['username']) && $nrows>0){
    	 	$content=$_REQUEST['postContent'];
   		$query  = "UPDATE microposts SET content='$content', updated_at=NOW() WHERE id='$PostId'";
-  		print_r($query);
+
   		$result= @ mysql_query($query,$db);
   		$smarty->assign('Msg', "SUCCESS: Post updated");	
   		$smarty->assign('text_color',"green");
