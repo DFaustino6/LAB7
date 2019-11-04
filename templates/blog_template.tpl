@@ -25,16 +25,17 @@
 					<textarea class="form-control" id="post" name="postContent" style="resize: vertical;">{$post_content}</textarea>
 				</div>
 			</div>
+		
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+			     	<button type="submit" name="post" class="btn btn-default">Post</button>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+			    	 <a href="index.php" role="button" name="cancel" class="btn btn-danger">Cancel</a>
+				</div>
+			</div>
 		</form>
-		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-			     <button type="submit" name="post" class="btn btn-default">Post</button>
-		</div>
-		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-			     <a href="index.php" role="button" name="cancel" class="btn btn-danger">Cancel</a>
-		</div>
-	</div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
