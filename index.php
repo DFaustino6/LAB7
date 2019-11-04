@@ -51,8 +51,8 @@ if($db) {
     $nrows  = mysql_num_rows($result);
     if($nrows > 0) {
       $tuple[0] = mysql_fetch_array($result,MYSQL_ASSOC);
-    $_SESSION['username'] = $tuple[0]['name'];
-    $_SESSION['id'] = $tuple[0]['id'];
+      $_SESSION['username'] = $tuple[0]['name'];
+      $_SESSION['id'] = $tuple[0]['id'];
     }
   }
 
