@@ -1,5 +1,5 @@
 <?php
-
+include 'db.php';
 require('libs/Smarty.class.php');
 $smarty = new Smarty();
 
