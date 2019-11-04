@@ -16,7 +16,7 @@ session_start();
     	$query = "UPDATE users
                SET remember_digest = null
                WHERE id = $user_id";          
-        $result = @ mysql_query($Cookie,$db);
+        $result = @ mysql_query($query,$db);
     	unset($_COOKIE['autologin']);
 	}
 
