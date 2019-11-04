@@ -10,9 +10,13 @@ $PostId=$_GET['Post_id'];
 
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db){
-   $query  = "SELECT content  FROM microposts WHERE id='$PostId'";
+   $query  = "SELECT content FROM microposts WHERE id='$PostId'";
    $result = @ mysql_query($query,$db);
-   $smarty->assign('Post_content',$result);
+   $nrows  = mysql_num_rows($result);
+   $tuple[0] = mysql_fetch_array($result,MYSQL_ASSOC);
+   if($nrows>0) {
+    $smarty->assign('Post_content',$tuple[0]['content']);
+  } 
 }
 mysql_close($db);
   
@@ -29,5 +33,4 @@ mysql_close($db);
     $smarty->assign('Action',"newblog_action.php");
 
   $smarty->display('blog_template.tpl');
-
 ?>
