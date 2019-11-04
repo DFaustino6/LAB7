@@ -47,7 +47,9 @@ if($db) {
     $query = "SELECT name, id 
              FROM users
              WHERE remember_digest ='$cValue'";
-    $result = @ mysql_query($query,$db)
+    print_r($query);
+    if(!($result = @ mysql_query($query,$db )))
+      showerror();
     $nrows  = mysql_num_rows($result);
     if($nrows > 0) {
       $tuple[0] = mysql_fetch_array($result,MYSQL_ASSOC);
