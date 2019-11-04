@@ -15,7 +15,7 @@ if($db) {
  	  	 if(!($result = @ mysql_query($query,$db)))
    			showerror();
    	 $nrows  = mysql_num_rows($result);
-   	 print_r($nrows);
+   	 print_r($PostId);
 
    	 if(isset($_SESSION['username']) && $nrows>0){
    	 	$content=$_REQUEST['postContent'];
