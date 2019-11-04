@@ -11,7 +11,7 @@ if($db) {
   // criar query numa string
   $PostId=$_GET['Post_id'];
   if(isset($_GET['Post_id'])){
- 	 $query  = "SELECT * FROM microposts WHERE id=$PostId";
+ 	 $query  = "SELECT * FROM microposts WHERE id='$PostId'";
  	 print_r($query);
  	 if(!($result = @ mysql_query($query,$db)))
    			showerror();
