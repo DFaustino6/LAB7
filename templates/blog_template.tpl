@@ -18,7 +18,7 @@
 </nav>
 <div class="container" style="padding-top: 1%">
 	<div class="well">
-		<div class="container-fluid text-left" style="padding-top: 0.5%;border-radius: 5px">
+		<div class="container-fluid text-center" style="padding-top: 0.5%;border-radius: 5px">
 			 <form class="form-horizontal" action="login_action.php">
 			 	<div class="form-group">
 			      <label class="control-label col-sm-2" for="email">{$Action} you post:</label>
@@ -29,6 +29,11 @@
 			    <div class="form-group">        
 			      <div class="col-sm-offset-2 col-sm-10">
 			        <button type="submit" class="btn btn-default">Post</button>
+			      </div>
+			    </div>
+			    <div class="form-group">        
+			      <div class="col-sm-offset-2 col-sm-10">
+			        <a href="index.php" role="button" class="btn btn-danger">Clear</a>
 			      </div>
 			    </div>
   			</form>
