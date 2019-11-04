@@ -10,7 +10,7 @@ $PostId=$_GET['Post_id'];
 
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db){
-   $query  = "SELECT content * FROM microposts WHERE id='$PostId'";
+   $query  = "SELECT content  FROM microposts WHERE id='$PostId'";
    $result = @ mysql_query($query,$db);
    $smarty->assign('Post_content',$result);
 }
@@ -28,7 +28,6 @@ mysql_close($db);
   else
     $smarty->assign('Action',"newblog_action.php");
 
-  // Mostra a tabela
   $smarty->display('blog_template.tpl');
 
 ?>
