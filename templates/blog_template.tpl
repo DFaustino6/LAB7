@@ -26,7 +26,7 @@
               </div>
             </div>
             <div class="form-group" style="padding-top: 1%">
-              <button type="submit" name="submit" class="btn btn-success">Post</button>
+              <button type="submit" name="submit" class="btn btn-success btn-lg">Post</button>
               <a href="index.php" role="button" name="cancel" class="btn btn-danger btn-lg" >Cancel</a>
             </div>
         </form>
