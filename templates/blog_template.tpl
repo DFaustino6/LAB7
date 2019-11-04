@@ -18,7 +18,7 @@
 </nav>
 <div class="container" style="padding-top: 1%">
 	<div class="container-fluid well">
-        <form class="form-vertical" action="{$Action}" method="GET">
+        <form class="form-vertical" action="{$Action}" method="POST">
             <div class="form-group">
               <label class="control-label col-sm-3" for="post" style="font-size: x-large">{$ActionPost} your post:</label>
               <div>
