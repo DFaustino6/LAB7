@@ -13,11 +13,11 @@ $smarty->compile_dir = 'templates_c';
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db) {
   // criar query numa string
-   $query  = "";
+   //$query  = "";
  
   // executar a query
-  if(!($result = @ mysql_query($query,$db )))
-   showerror();
+  //if(!($result = @ mysql_query($query,$db )))
+  // showerror();
 
 
 
