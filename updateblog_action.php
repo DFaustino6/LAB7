@@ -1,5 +1,9 @@
 <?php
 include 'db.php';
+
+require('libs/Smarty.class.php');
+$smarty = new Smarty();
+
 // ligação à base de dados
 session_start();
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
@@ -25,9 +29,9 @@ if($db) {
   	$smarty->assign('text_color',"red");
    	$smarty->assign('back_color',"#ff9d9d");
   }
-
-} 
 mysql_close($db);
 
 $smarty->display('message_template.tpl');
+} 
+
 ?>
