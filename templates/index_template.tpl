@@ -82,7 +82,7 @@
   <div class="row">
     <div class="col-sm-2">
       <div class="well text-center">
-        <a href="#"><img src="plus.png" style="width: 60%;" class="center"></a>
+        <a href="newblog_action.php"><img src="plus.png" style="width: 60%;" class="center"></a>
         <p>Add new post</p>
       </div>
     </div>
